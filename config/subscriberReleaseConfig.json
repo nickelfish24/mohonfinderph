@@ -1,0 +1,10 @@
+{
+  "brand": "#16a34a",
+  "brandDark": "#166534",
+  "brandSoft": "rgba(22, 163, 74, 0.22)",
+  "iconPath": "./assets/variants/subscriber/icon-subscriber-green.png",
+  "adaptiveForegroundPath": "./assets/variants/subscriber/android-icon-foreground-subscriber-green-safe.png",
+  "adaptiveBackgroundPath": "./assets/variants/subscriber/android-icon-background-subscriber-black.png",
+  "adaptiveBackgroundColor": "#000000",
+  "splashImage": "./assets/variants/subscriber/splash-transparent.png"
+}

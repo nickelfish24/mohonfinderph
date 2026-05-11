@@ -1,0 +1,51 @@
+{
+  "subscriber": [
+    "assets\\variants\\subscriber\\icon-subscriber-green.png",
+    "assets\\variants\\subscriber\\icon-subscriber-black.png",
+    "assets\\variants\\subscriber\\icon-subscriber-black-adaptive.png",
+    "assets\\variants\\subscriber\\android-icon-foreground-subscriber-green.png",
+    "assets\\variants\\subscriber\\android-icon-foreground-subscriber-green-safe.png",
+    "assets\\variants\\subscriber\\android-icon-background-subscriber-green.png",
+    "assets\\variants\\subscriber\\android-icon-background-subscriber-black.png",
+    "assets\\variants\\subscriber\\title-icon-subscriber-green.png",
+    "assets\\variants\\subscriber\\splash-transparent.png"
+  ],
+  "owner": [
+    "assets\\variants\\owner\\icon-owner.png",
+    "assets\\variants\\owner\\icon-owner-black-adaptive.png",
+    "assets\\variants\\owner\\android-icon-foreground-owner-red.png",
+    "assets\\variants\\owner\\android-icon-foreground-owner-red-safe.png",
+    "assets\\variants\\owner\\android-icon-background-owner.png",
+    "assets\\variants\\owner\\android-icon-background-owner-black.png",
+    "assets\\variants\\owner\\title-icon-owner-red.png",
+    "assets\\variants\\owner\\splash-owner-white.png"
+  ],
+  "dev": [
+    "assets\\variants\\dev\\icon-dev-blue.png",
+    "assets\\variants\\dev\\icon-dev-black-adaptive.png",
+    "assets\\variants\\dev\\android-icon-foreground-dev-skyblue.png",
+    "assets\\variants\\dev\\android-icon-foreground-dev-skyblue-safe.png",
+    "assets\\variants\\dev\\android-icon-background-dev.png",
+    "assets\\variants\\dev\\android-icon-background-dev-black.png",
+    "assets\\variants\\dev\\title-icon-dev-blue.png",
+    "assets\\variants\\dev\\splash-dev-white.png"
+  ],
+  "dual": [
+    "assets\\variants\\dual\\icon-dual-orange.png",
+    "assets\\variants\\dual\\icon-dual-orange-adaptive.png",
+    "assets\\variants\\dual\\android-icon-foreground-dual-orange-target-safe.png",
+    "assets\\variants\\dual\\android-icon-background-dual-black.png",
+    "assets\\variants\\dual\\title-icon-dual-orange.png",
+    "assets\\variants\\dual\\splash-dual-orange.png"
+  ],
+  "standalone": [
+    "assets\\variants\\standalone\\icon-dev-blue.png",
+    "assets\\variants\\standalone\\icon-dev-black-adaptive.png",
+    "assets\\variants\\standalone\\android-icon-foreground-dev-skyblue.png",
+    "assets\\variants\\standalone\\android-icon-foreground-dev-skyblue-safe.png",
+    "assets\\variants\\standalone\\android-icon-background-dev.png",
+    "assets\\variants\\standalone\\android-icon-background-dev-black.png",
+    "assets\\variants\\standalone\\title-icon-dev-blue.png",
+    "assets\\variants\\standalone\\splash-dev-white.png"
+  ]
+}

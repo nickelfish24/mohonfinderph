@@ -1,0 +1,16 @@
+{
+  "session_name": "MF-SA ADS-ON",
+  "workspace": "C:/Users/LENOVO/Desktop/System Projects/MF_Variants/MF-SA/MF-SA-Workspace",
+  "app_variant": "standalone",
+  "env": {
+    "NODE_ENV": "production",
+    "APP_VARIANT": "standalone",
+    "EXPO_PUBLIC_APP_VARIANT": "standalone",
+    "EXPO_PUBLIC_ADS_ENABLED": "true",
+    "EXPO_PUBLIC_STANDALONE_ADS_MODE": "on",
+    "APP_ALLOW_INSECURE_RELEASE_SIGNING": "true"
+  },
+  "build_script": "scripts/build-mfsa-ads-on.ps1",
+  "output_dir": "releases/MF-SA/ADS-ON",
+  "android_package_id": "com.mohonfinderph.app.adson.mfsa"
+}

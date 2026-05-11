@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Mohon Finder PH",
+    "slug": "mohon-finder-ph",
+    "owner": "mohonfinderph-2",
+    "version": "1.0.2",
+    "orientation": "default",
+    "icon": "./assets/variants/subscriber/icon-subscriber-green.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/variants/subscriber/splash-transparent.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "enabled": false,
+      "checkAutomatically": "NEVER",
+      "fallbackToCacheTimeout": 0
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.mohonfinderph.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#000000",
+        "foregroundImage": "./assets/android-icon-foreground-subscriber-green-safe.png",
+        "backgroundImage": "./assets/android-icon-background-subscriber-green.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/variants/subscriber/icon-subscriber-green.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3d3a2e8e-4dd7-43c7-8f16-a1fd582e837b"
+      }
+    }
+  }
+}

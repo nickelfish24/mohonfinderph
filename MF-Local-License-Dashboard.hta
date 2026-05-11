@@ -1,0 +1,234 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>MF Local License Dashboard Launcher</title>
+  <hta:application
+    id="mfDashLauncher"
+    applicationname="MF Dashboard Launcher"
+    border="thin"
+    caption="yes"
+    maximizebutton="no"
+    minimizebutton="yes"
+    showintaskbar="yes"
+    singleinstance="yes"
+    sysmenu="yes"
+    windowstate="normal"
+  />
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      margin: 20px;
+      background: #f4f7ff;
+      color: #0f1a33;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #dbe4f7;
+      border-radius: 12px;
+      padding: 16px;
+      max-width: 520px;
+      box-shadow: 0 4px 12px rgba(15, 35, 80, 0.08);
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #0f2350;
+    }
+    p {
+      margin: 0 0 14px;
+      color: #334b77;
+      line-height: 1.4;
+    }
+    .row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    button {
+      border: none;
+      border-radius: 10px;
+      padding: 10px 14px;
+      cursor: pointer;
+      font-weight: 600;
+      background: #0f2350;
+      color: #fff;
+    }
+    button.alt {
+      background: #1f3f7a;
+    }
+    .status {
+      font-size: 13px;
+      color: #445d8a;
+      margin-top: 6px;
+      white-space: pre-wrap;
+    }
+  </style>
+  <script language="javascript">
+    function runCommand(command) {
+      var shell = new ActiveXObject("WScript.Shell");
+      shell.Run(command, 0, false);
+    }
+
+    function getFileSystemObject() {
+      return new ActiveXObject("Scripting.FileSystemObject");
+    }
+
+    function dashboardCmdPath() {
+      var fso = getFileSystemObject();
+      var known = [
+        "F:\\System Projects\\mohon_finder_ph\\scripts\\open-license-dashboard.cmd",
+        "C:\\Users\\LENOVO\\Desktop\\System Projects\\mohon_finder_ph\\scripts\\open-license-dashboard.cmd"
+      ];
+      for (var i = 0; i < known.length; i += 1) {
+        if (fso.FileExists(known[i])) {
+          return known[i];
+        }
+      }
+
+      var path = location.pathname || "";
+      path = decodeURIComponent(path);
+      if (path.charAt(0) === "/") {
+        path = path.substring(1);
+      }
+      path = path.replace(/\//g, "\\");
+      var baseDir = path.replace(/[^\\]+$/, "");
+      var localCandidate = baseDir + "scripts\\open-license-dashboard.cmd";
+      if (fso.FileExists(localCandidate)) {
+        return localCandidate;
+      }
+      return "";
+    }
+
+    function anywhereCmdPath() {
+      var fso = getFileSystemObject();
+      var known = [
+        "F:\\System Projects\\mohon_finder_ph\\scripts\\start-license-dashboard-anywhere.cmd",
+        "C:\\Users\\LENOVO\\Desktop\\System Projects\\mohon_finder_ph\\scripts\\start-license-dashboard-anywhere.cmd"
+      ];
+      for (var i = 0; i < known.length; i += 1) {
+        if (fso.FileExists(known[i])) {
+          return known[i];
+        }
+      }
+
+      var path = location.pathname || "";
+      path = decodeURIComponent(path);
+      if (path.charAt(0) === "/") {
+        path = path.substring(1);
+      }
+      path = path.replace(/\//g, "\\");
+      var baseDir = path.replace(/[^\\]+$/, "");
+      var localCandidate = baseDir + "scripts\\start-license-dashboard-anywhere.cmd";
+      if (fso.FileExists(localCandidate)) {
+        return localCandidate;
+      }
+      return "";
+    }
+
+    function lastPublicCmdPath() {
+      var fso = getFileSystemObject();
+      var known = [
+        "F:\\System Projects\\mohon_finder_ph\\scripts\\open-license-dashboard-public-url.cmd",
+        "C:\\Users\\LENOVO\\Desktop\\System Projects\\mohon_finder_ph\\scripts\\open-license-dashboard-public-url.cmd"
+      ];
+      for (var i = 0; i < known.length; i += 1) {
+        if (fso.FileExists(known[i])) {
+          return known[i];
+        }
+      }
+
+      var path = location.pathname || "";
+      path = decodeURIComponent(path);
+      if (path.charAt(0) === "/") {
+        path = path.substring(1);
+      }
+      path = path.replace(/\//g, "\\");
+      var baseDir = path.replace(/[^\\]+$/, "");
+      var localCandidate = baseDir + "scripts\\open-license-dashboard-public-url.cmd";
+      if (fso.FileExists(localCandidate)) {
+        return localCandidate;
+      }
+      return "";
+    }
+
+    function startDashboard() {
+      try {
+        var cmdPath = dashboardCmdPath();
+        if (!cmdPath) {
+          document.getElementById("status").innerText =
+            "Launcher script not found. Please keep this file in project folder or re-copy latest launcher.";
+          return;
+        }
+        runCommand('cmd /c ""' + cmdPath + '""');
+        document.getElementById("status").innerText =
+          "Starting dashboard server and opening browser...";
+      } catch (error) {
+        document.getElementById("status").innerText =
+          "Failed to start dashboard: " + error.message;
+      }
+    }
+
+    function openDashboardOnly() {
+      try {
+        var ts = new Date().getTime();
+        runCommand('cmd /c start "" "http://127.0.0.1:8787/?v=' + ts + '"');
+        document.getElementById("status").innerText =
+          "Opening dashboard in browser...";
+      } catch (error) {
+        document.getElementById("status").innerText =
+          "Failed to open browser: " + error.message;
+      }
+    }
+
+    function startAnywhereAccess() {
+      try {
+        var cmdPath = anywhereCmdPath();
+        if (!cmdPath) {
+          document.getElementById("status").innerText =
+            "Anywhere launcher script not found. Please update project scripts.";
+          return;
+        }
+        runCommand('cmd /c ""' + cmdPath + '""');
+        document.getElementById("status").innerText =
+          "Starting public tunnel... wait around 10-30 seconds while URL is generated.";
+      } catch (error) {
+        document.getElementById("status").innerText =
+          "Failed to start anywhere access: " + error.message;
+      }
+    }
+
+    function openLastPublicUrl() {
+      try {
+        var cmdPath = lastPublicCmdPath();
+        if (!cmdPath) {
+          document.getElementById("status").innerText =
+            "Public URL opener script not found.";
+          return;
+        }
+        runCommand('cmd /c ""' + cmdPath + '""');
+        document.getElementById("status").innerText =
+          "Opening last saved public URL...";
+      } catch (error) {
+        document.getElementById("status").innerText =
+          "Failed to open public URL: " + error.message;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="card">
+    <h1>MF Local License Dashboard</h1>
+    <p>Use local mode for same Wi-Fi. Use anywhere mode to generate a public URL for phone access outside LAN.</p>
+    <div class="row">
+      <button onclick="startDashboard()">Start + Open Dashboard</button>
+      <button class="alt" onclick="openDashboardOnly()">Open Dashboard Only</button>
+    </div>
+    <div class="row">
+      <button onclick="startAnywhereAccess()">Start Anywhere Access (Public URL)</button>
+      <button class="alt" onclick="openLastPublicUrl()">Open Last Public URL</button>
+    </div>
+    <div id="status" class="status">Ready.</div>
+  </div>
+</body>
+</html>
