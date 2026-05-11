@@ -1,0 +1,11 @@
+{
+  "brand": "#16a34a",
+  "brandDark": "#166534",
+  "brandSoft": "rgba(22, 163, 74, 0.22)",
+  "iconPath": "./assets/variants/free/icon-free-green-white-solid.png",
+  "adaptiveForegroundPath": "./assets/variants/free/android-icon-foreground-free-green.png",
+  "adaptiveBackgroundPath": "./assets/variants/free/background-free-white.png",
+  "adaptiveBackgroundColor": "#ffffff",
+  "splashImage": "./assets/variants/free/icon-free-green-white-solid.png",
+  "splashBackgroundColor": "#ffffff"
+}

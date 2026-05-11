@@ -1,0 +1,111 @@
+{
+  "cli": {
+    "version": ">= 16.16.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_ENABLE_MOCK_BILLING": "true",
+        "EXPO_PUBLIC_AUTO_DEV_AUTH": "true",
+        "DEV_RELEASE_BUILD": "true",
+        "EXPO_PUBLIC_APP_VARIANT": "dev",
+        "APP_VARIANT": "dev"
+      }
+    },
+    "dual": {
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "DUAL_RELEASE_BUILD": "true",
+        "EXPO_PUBLIC_APP_VARIANT": "dual",
+        "APP_VARIANT": "dual",
+        "EXPO_PUBLIC_ENABLE_MOCK_BILLING": "true",
+        "EXPO_PUBLIC_AUTO_DEV_AUTH": "true",
+        "EXPO_PUBLIC_OWNER_FULL_ACCESS": "false"
+      }
+    },
+    "standalone": {
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "STANDALONE_RELEASE_BUILD": "true",
+        "EXPO_PUBLIC_APP_VARIANT": "standalone",
+        "APP_VARIANT": "standalone",
+        "EXPO_PUBLIC_ENABLE_MOCK_BILLING": "true",
+        "EXPO_PUBLIC_AUTO_DEV_AUTH": "true",
+        "EXPO_PUBLIC_OWNER_FULL_ACCESS": "false"
+      }
+    },
+    "preview": {
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "env": {
+        "EXPO_PUBLIC_ENABLE_MOCK_BILLING": "false",
+        "EXPO_PUBLIC_AUTO_DEV_AUTH": "false"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "env": {
+        "EXPO_PUBLIC_ENABLE_MOCK_BILLING": "false",
+        "EXPO_PUBLIC_AUTO_DEV_AUTH": "false",
+        "EXPO_PUBLIC_OWNER_FULL_ACCESS": "false"
+      }
+    },
+    "owner": {
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "OWNER_RELEASE_BUILD": "true",
+        "EXPO_PUBLIC_APP_VARIANT": "owner",
+        "APP_VARIANT": "owner",
+        "EXPO_PUBLIC_ENABLE_MOCK_BILLING": "false",
+        "EXPO_PUBLIC_AUTO_DEV_AUTH": "false",
+        "EXPO_PUBLIC_OWNER_FULL_ACCESS": "true"
+      }
+    },
+    "subscriber": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_APP_VARIANT": "subscriber",
+        "APP_VARIANT": "subscriber",
+        "EXPO_PUBLIC_ENABLE_MOCK_BILLING": "false",
+        "EXPO_PUBLIC_AUTO_DEV_AUTH": "false",
+        "EXPO_PUBLIC_OWNER_FULL_ACCESS": "false"
+      }
+    },
+    "free": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_APP_VARIANT": "free",
+        "APP_VARIANT": "free",
+        "FREE_VARIANT_ANDROID_PACKAGE": "mffm.newvariant",
+        "EXPO_PUBLIC_ENABLE_MOCK_BILLING": "false",
+        "EXPO_PUBLIC_AUTO_DEV_AUTH": "false",
+        "EXPO_PUBLIC_OWNER_FULL_ACCESS": "false"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

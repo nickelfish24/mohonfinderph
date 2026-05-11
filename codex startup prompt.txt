@@ -1,0 +1,92 @@
+You are an expert React Native engineer.
+
+Create a clean, production-ready starter mobile app called "Mohon Finder PH" using Expo (React Native).
+
+GOAL:
+Set up the full working foundation of the app so it can run immediately on Android using Expo Go.
+
+REQUIREMENTS:
+
+1. PROJECT SETUP
+- Use Expo (create-expo-app)
+- Use JavaScript (not TypeScript for now)
+- Clean folder structure:
+  /components
+  /screens
+  /utils
+  /services
+
+2. INITIAL SCREENS (3 tabs)
+Create a bottom tab navigation with:
+
+A. Home Screen
+- Title: "Mohon Finder PH"
+- Button: "Start New Lot"
+- Button: "View Saved Lots (locked)"
+
+B. Map Screen
+- Integrate Google Maps or Expo MapView
+- Show:
+  - User GPS location
+  - Placeholder marker (mock mohon point)
+
+C. Input Screen
+- Form inputs:
+  - Starting Latitude
+  - Starting Longitude
+  - Bearing
+  - Distance
+- Button: "Compute Mohon"
+
+3. BASIC FUNCTIONALITY
+- Create a utility function:
+  convertBearingDistanceToXY(bearing, distance)
+- For now, return mock data (we will improve later)
+
+4. GPS FEATURE
+- Ask user permission
+- Get current location using Expo Location
+- Display coordinates on screen
+
+5. UI DESIGN
+- Simple and clean
+- Use basic React Native components (View, Text, Button, TextInput)
+- Add spacing and readable layout
+
+6. MONETIZATION PREP (IMPORTANT)
+- Add a locked feature UI:
+  - Show "🔒 Premium Feature"
+  - Button: "Upgrade to unlock"
+- Do NOT implement payment yet
+
+7. RUN INSTRUCTIONS
+- Include step-by-step instructions:
+  - install dependencies
+  - start app (npx expo start)
+  - run on Android using Expo Go
+
+OUTPUT:
+- Complete working code
+- All files included
+- No missing dependencies
+- Must run without errors on first launch
+
+
+
+
+⚡ What to do AFTER this
+
+Once Codex gives you the project:
+Next prompt:
+Replace the mock convertBearingDistanceToXY function with real surveying math using quadrant bearings.
+
+🚀 Pro Tip (Very Important)
+When Codex finishes, ALWAYS say:
+“Check for missing dependencies and fix any errors.”
+
+This prevents 90% of beginner problems.
+
+If you want, next I can give you:
+✅ Phase 2 prompt (real mohon math engine)
+✅ Phase 3 prompt (map + polygon plotting)
+✅ Phase 4 prompt (premium subscription system)

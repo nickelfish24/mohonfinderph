@@ -1,0 +1,30 @@
+# Dependencies and local runtime caches
+node_modules
+.expo
+
+# VCS metadata
+.git
+
+# Local backups and build artifacts
+backups
+dist
+dist-phase1
+*.apk
+*.aab
+*.log
+expo-*.log
+
+# IDE and local metadata
+.idea
+docs
+codex startup prompt.txt
+
+# Android local/generated files (keep source files)
+android/.gradle
+android/.kotlin
+android/build
+android/app/build
+android/.cxx
+android/app/.cxx
+android/local.properties
+android/keystore.properties

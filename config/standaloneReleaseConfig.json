@@ -1,0 +1,10 @@
+{
+  "brand": "#1e3a8a",
+  "brandDark": "#172554",
+  "brandSoft": "rgba(30, 58, 138, 0.22)",
+  "iconPath": "./assets/variants/standalone/icon-dev-blue.png",
+  "adaptiveForegroundPath": "./assets/variants/standalone/android-icon-foreground-dev-skyblue-safe.png",
+  "adaptiveBackgroundPath": "./assets/variants/standalone/android-icon-background-dev-black.png",
+  "adaptiveBackgroundColor": "#000000",
+  "splashImage": "./assets/variants/standalone/splash-dev-white.png"
+}
